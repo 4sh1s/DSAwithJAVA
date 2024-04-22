@@ -1,4 +1,4 @@
-package DataStructures;
+package dataStructures;
 
 public class LinkedList {
     private Node head;
@@ -39,5 +39,18 @@ public class LinkedList {
 
     public void getLength(){
         System.out.println("Length:" + length);
+    }
+
+    public void append(int value){
+        Node newNode = new Node(value);
+        if (length == 0){
+            head = newNode;
+            tail = newNode;
+            length = 1;
+        }else {
+            tail.next= newNode;
+            tail = newNode;
+
+        }
     }
 }
