@@ -29,12 +29,10 @@ public class Main {
         myLinkedList.append(4);
         myLinkedList.append(5);
 
-        // create a loop by connecting the tail to the second node
-        myLinkedList.getTail().next = myLinkedList.getHead().next;
+        int k = 4;
+        int result = myLinkedList.findKthFromEnd2(k).value;
 
-
-        System.out.println("Has Loop:");
-        System.out.println( myLinkedList.hasLoop());
+        System.out.println(result); //
 
 
 
