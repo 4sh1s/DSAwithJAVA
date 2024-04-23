@@ -5,13 +5,7 @@ package dataStructures.LinkedList;
 public class Main {
     public static void main(String[] args) {
         LinkedList newLL = new LinkedList(5);
-//        LinkedList newLL2 = new LinkedList(2);
-//        LinkedList newLL3 = new LinkedList(5);
-//        newLL.getHead();
-//        newLL.getTail();
-//        newLL.getLength();
-//
-//        newLL.printList();
+
         newLL.append(7);
         newLL.prepend(89);
         newLL.getHead();
@@ -23,8 +17,25 @@ public class Main {
         System.out.println(newLL.set(-2,9989));
         System.out.println(newLL.set(1,9989));
         newLL.printList();
+        System.out.println("middle Node: "+newLL.findMiddleNode().value);
         newLL.reverse();
         newLL.printList();
+        System.out.println("middle Node: "+newLL.findMiddleNode().value);
+
+
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        myLinkedList.append(5);
+
+        // create a loop by connecting the tail to the second node
+        myLinkedList.getTail().next = myLinkedList.getHead().next;
+
+
+        System.out.println("Has Loop:");
+        System.out.println( myLinkedList.hasLoop());
+
 
 
 

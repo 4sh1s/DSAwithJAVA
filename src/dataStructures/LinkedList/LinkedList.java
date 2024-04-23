@@ -1,5 +1,7 @@
 package dataStructures.LinkedList;
 
+import static java.lang.System.in;
+
 public class LinkedList {
     private Node head;
     private Node tail;
@@ -28,17 +30,16 @@ public class LinkedList {
             temp = temp.next;
         }
     }
-
-    public void getHead() {
-        System.out.println("Head:" + head.value);
+    public Node getHead() {
+        return head;
     }
 
-    public void getTail(){
-        System.out.println("Tail:" + tail.value);
+    public Node getTail() {
+        return tail;
     }
 
-    public void getLength(){
-        System.out.println("Length:" + length);
+    public int getLength() {
+        return length;
     }
 
     public void append(int value){
@@ -151,7 +152,7 @@ public class LinkedList {
         Node temp = head;
         head =tail;
         tail= temp;
-        Node after =  temp.next;
+        Node after = temp.next;
         Node before = null;
         for(int i =0;i<length;i++){
             after = temp.next;
@@ -160,4 +161,34 @@ public class LinkedList {
             temp=after;
         }
     }
+
+    public Node findMiddleNode(){
+        if(head==null)return null;
+        int l = 1;
+        Node middle = head;
+        if (head==tail || head.next==tail) return head;
+        do{ l++;
+        middle =middle.next;}
+        while (middle.next!=null);
+        middle = head;
+        for(int i=1;i<(l/2)+1;i++) {
+                middle = middle.next;
+            }
+        return middle;
+    }
+
+    public boolean hasLoop(){
+        if (head==null) return false;
+        Node slow= head;
+        Node fast= head;
+        do{
+            slow=slow.next;
+            for (int i =0 ; i <2; i++) {
+                if (fast.next != null) fast = fast.next;
+            }
+            if(slow==fast) break;
+        }while(fast.next!=null);
+        return slow == fast;
+    }
+
 }
