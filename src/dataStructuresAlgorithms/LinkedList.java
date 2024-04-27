@@ -1,5 +1,8 @@
 package dataStructures.LinkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static java.lang.System.in;
 
 public class LinkedList {
@@ -152,7 +155,7 @@ public class LinkedList {
         Node temp = head;
         head =tail;
         tail= temp;
-        Node after = temp.next;
+        Node after;
         Node before = null;
         for(int i =0;i<length;i++){
             after = temp.next;
@@ -223,4 +226,33 @@ public class LinkedList {
         return slow;
     }
 
+    public void removeDuplicates(){
+        if (head==tail || head==null) ;
+        Set<Integer>  values = new HashSet<>();
+        Node temp = head.next;
+        Node prev = head;
+        values.add(head.value);
+        while (temp!=null){
+            if (values.contains(temp.value)){
+                prev.next = temp.next;
+                temp.next =null;
+                temp=prev.next;
+            }
+            else{
+                values.add(temp.value);
+                temp=temp.next;
+                prev=prev.next;
+            }
+        }
+    }
+
+    public int binaryToDecimal() {
+        int num = 0;
+        Node current = head;
+        while (current != null) {
+            num = num * 2 + current.value;
+            current = current.next;
+        }
+        return num;
+    }
 }
