@@ -1,9 +1,7 @@
-package dataStructures.LinkedList;
+package dataStructuresAlgorithms;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import static java.lang.System.in;
 
 public class LinkedList {
     private Node head;

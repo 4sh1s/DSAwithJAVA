@@ -1,9 +1,7 @@
-package dataStructures.LinkedList;
+package dataStructuresAlgorithms;
 
-import java.security.KeyStore;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
