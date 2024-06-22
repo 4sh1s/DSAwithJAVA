@@ -33,7 +33,7 @@ public class StringsPractice {
     public static Boolean isAnagram(String ss){
         boolean isAnagram = false;
         String sss = ss.toLowerCase();
-        if (sss==null || sss.isEmpty() || sss.isBlank()) return isAnagram;
+        if (sss.isEmpty() || sss.isBlank()) return isAnagram;
         else{
             int i = 0;
             int j = sss.length()-1;
