@@ -16,6 +16,7 @@ public class StringsPractice {
         StringBuilder sb = new StringBuilder();
         sb.append(Arrays.toString(sa));
         return sb.toString();
+
     }
 
     public static HashMap<String, Integer> numberOfOccurences(String ss){

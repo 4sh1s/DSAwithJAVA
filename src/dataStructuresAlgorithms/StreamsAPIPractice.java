@@ -1,6 +1,7 @@
 package dataStructuresAlgorithms;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class StreamsAPIPractice {
 
@@ -33,7 +34,7 @@ public class StreamsAPIPractice {
     }
 
     public List<String> sortStringsAsc(List<String> strings){ // returns the list of strings in ascending sorted order
-        return strings.stream().sorted().toList();
+        return strings.stream().sorted().collect(Collectors.toList());
     }
 
     public List<String> sortStringsDesc(List<String> strings){//returns the list of strings in descending sorted order
