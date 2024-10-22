@@ -125,8 +125,10 @@ public class Main {
 //            i++;
 //        }
 //        System.out.println("end time:"+ Instant.now());
-        kaprekarsConstant(9998);
+//        kaprekarsConstant(9998);
+LoopsPractice.infiniteLoop("Hardik Is Gay");
     }
+
 
 
 
